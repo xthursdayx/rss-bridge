@@ -12,6 +12,15 @@ class PatreonBridge extends BridgeAbstract {
 			'required' => true,
 			'title' => 'Creator name as seen in their page URL'
 		)
+	const CONFIGURATION = array(
+		'api_key' => array(
+			'required' => true,
+			),
+                                        'api_key_can_fetch_images' => array(
+                                                 'required' => false,
+                                                 'defaultValue' => 'no',
+                                        )
+	);	
 	));
 
 	public function collectData(){
