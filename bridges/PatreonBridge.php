@@ -16,12 +16,11 @@ class PatreonBridge extends BridgeAbstract {
 		'api_key' => array(
 			'required' => true,
 			),
-                                        'api_key_can_fetch_images' => array(
-                                                 'required' => false,
-                                                 'defaultValue' => 'no',
-                                        )
-	);	
-	));
+                        'api_key_can_fetch_images' => array(
+                                 'required' => false,
+                                 'defaultValue' => 'no',
+			),	
+	);
 
 	public function collectData(){
 		$html = getSimpleHTMLDOMCached($this->getURI(), 86400)
